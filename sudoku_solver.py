@@ -59,11 +59,10 @@ def sudoku_solver(sudoku):
 
     return solved_sudoku
 
-i = 0
-for sudoku in sudokus:
-    i++
-    print("This is sudoku number", i)
-    print(sudoku)
-    your_solution = sudoku_solver(sudokus)
-    print("Solution:")
-    print(your_solution)
+for i in range(len(sudokus)):
+     sudoku = sudokus[i].copy()
+     print("This is sudoku number", i+1)
+     print(sudokus[i])
+     your_solution = sudoku_solver(sudokus[i])
+     print("Solution:")
+     print(your_solution)
